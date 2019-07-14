@@ -153,5 +153,5 @@ let resThetaPersei = L.get('θPersei');
 
 获取全部星体定位表
 
-[返回主页](../)
+[返回主页](../readme.md)
   
