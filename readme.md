@@ -59,6 +59,7 @@ let resThetaPersei = L.get('θPersei');
 
 ### Locator 定位器
 
+* [Locator](./docs/Locator.md) 定位控制器
 * [SunLocator](./docs/locators/SolarStarLocator.md) 太阳定位器
 * [MercuryLocator](./docs/locators/SolarStarLocator.md) 水星定位器
 * [VenusLocator](./docs/locators/SolarStarLocator.md) 金星定位器
@@ -76,6 +77,7 @@ let resThetaPersei = L.get('θPersei');
 
 ### Coord 天球坐标
 
+* [Coord](./docs/Coord.md) 坐标控制器
 * [HorizontalCoordinate](./docs/coords/HorizontalCoordinate.md) 地平坐标
 * [HourAngleCoordinate](./docs/coords/HourAngleCoordinate.md) 时角坐标
 * [EquinoctialCoordinate](./docs/coords/EquinoctialCoordinate.md) 赤道坐标
