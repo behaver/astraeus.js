@@ -1,0 +1,33 @@
+{
+  "name": "@behaver/astraeus.js",
+  "version": "1.0.0",
+  "description": "AstraeusJS is biulded for astronomical calculation.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/behaver/astraeus.js.git"
+  },
+  "keywords": [
+    "astronomy"
+  ],
+  "author": "Sanwan, Dong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/behaver/astraeus.js/issues"
+  },
+  "homepage": "https://github.com/behaver/astraeus.js#readme",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
