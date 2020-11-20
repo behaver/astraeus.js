@@ -1,6 +1,6 @@
 import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
 import Precession from './Precession';
-import Angle from '../math/angle';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
