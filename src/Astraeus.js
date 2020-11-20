@@ -1,58 +1,110 @@
-'use strict';
+import Coord from './Coord';
+import Observer from './Observer';
+import Velocity from './velocity/CelestialVelocity';
+import JDate from './time/JDate/JDateRepository';
+import SiderealTime from './time/SiderealTime';
+import Angle from './math/Angle';
+import SphericalCoordinate3D from './math/coordinate/3d/SphericalCoordinate3D';
+import CylindricalCoordinate3D from './math/coordinate/3d/CylindricalCoordinate3D';
+import RectangularCoordinate3D from './math/coordinate/3d/RectangularCoordinate3D';
+import PolarCoordinate2D from './math/coordinate/2d/PolarCoordinate2D';
+import RectangularCoordinate2D from './math/coordinate/2d/RectangularCoordinate2D';
+import Derivator from './math/UnaryToolkit/Derivator';
+import NewtonSolver from './math/UnaryToolkit/NewtonSolver';
+import FixedStarLocator from './locators/FixedStarLocator';
+import OrbitSystemCrossLocator from './locators/OrbitSystemCrossLocator';
+import SystemCrossLocator from './locators/SystemCrossLocator';
+import SunLocator from './locators/SolarStarLocator/planets/Sun';
+import MercuryLocator from './locators/SolarStarLocator/planets/Mercury';
+import VenusLocator from './locators/SolarStarLocator/planets/Venus';
+import EarthLocator from './locators/SolarStarLocator/planets/Earth';
+import MoonLocator from './locators/SolarStarLocator/planets/Moon';
+import MarsLocator from './locators/SolarStarLocator/planets/Mars';
+import JupiterLocator from './locators/SolarStarLocator/planets/Jupiter';
+import SaturnLocator from './locators/SolarStarLocator/planets/Saturn';
+import UranusLocator from './locators/SolarStarLocator/planets/Uranus';
+import NeptuneLocator from './locators/SolarStarLocator/planets/Neptune';
+import PlutoLocator from './locators/SolarStarLocator/planets/Pluto';
+import EclipticCoordinate from './coords/EclipticCoordinate';
+import EquinoctialCoordinate from './coords/EquinoctialCoordinate';
+import GalacticCoordinate from './coords/GalacticCoordinate';
+import HorizontalCoordinate from './coords/HorizontalCoordinate';
+import HourAngleCoordinate from './coords/HourAngleCoordinate';
+import SystemSwitcher from './coords/SystemSwitcher';
+import Nutation from './corrections/Nutation';
+import Precession from './corrections/Precession';
+import AnnualAberration from './corrections/AnnualAberration';
+import AnnualParallax from './corrections/AnnualParallax';
+import AtmosphericRefraction from './corrections/AtmosphericRefraction';
+import DiurnalParallax from './corrections/DiurnalParallax';
+import FK5Deflection from './corrections/FK5Deflection';
+import GravitationalDeflection from './corrections/GravitationalDeflection';
+import FSDynamicCalculator from './calculators/FixedStarCalculator/DynamicCalculator';
+import FSTrigonometricCalculator from './calculators/FixedStarCalculator/TrigonometricCalculator';
+import MoonELP2000Calculator from './calculators/MoonELP2000Calculator';
+import Pluto99Calculator from './calculators/Pluto99Calculator';
+import EarthCalculator from './calculators/SolarPlanetsCalculator/planets/Earth';
+import JupiterCalculator from './calculators/SolarPlanetsCalculator/planets/Jupiter';
+import MarsCalculator from './calculators/SolarPlanetsCalculator/planets/Mars';
+import MercuryCalculator from './calculators/SolarPlanetsCalculator/planets/Mercury';
+import NeptuneCalculator from './calculators/SolarPlanetsCalculator/planets/Neptune';
+import SaturnCalculator from './calculators/SolarPlanetsCalculator/planets/Saturn';
+import UranusCalculator from './calculators/SolarPlanetsCalculator/planets/Uranus';
+import VenusCalculator from './calculators/SolarPlanetsCalculator/planets/Venus';
+import EarthSSBCalculator from './calculators/EarthSSBCalculator';
 
-module.exports = {
-  Coord: require('./Coord'),
-  Locator: require('./Locator'),
-  Velocity: require('./velocity/CelestialVelocity'),
-  JDate: require('./time/JDate/JDateRepository'),
-  SiderealTime: require('./time/SiderealTime'),
-  Angle: require('./math/Angle'),
-  SphericalCoordinate3D: require('./math/coordinate/3d/SphericalCoordinate3D'),
-  CylindricalCoordinate3D: require('./math/coordinate/3d/CylindricalCoordinate3D'),
-  RectangularCoordinate3D: require('./math/coordinate/3d/RectangularCoordinate3D'),
-  PolarCoordinate2D: require('./math/coordinate/2d/PolarCoordinate2D'),
-  RectangularCoordinate2D: require('./math/coordinate/2d/RectangularCoordinate2D'),
-  Derivator: require('./math/UnaryToolkit/Derivator'),
-  NewtonSolver: require('./math/UnaryToolkit/NewtonSolver'),
-  FixedStarLocator: require('./locators/FixedStarLocator'),
-  OrbitSystemCrossLocator: require('./locators/OrbitSystemCrossLocator'),
-  SystemCrossLocator: require('./locators/SystemCrossLocator'),
-  SunLocator: require('./locators/SolarStarLocator/planets/SunLocator'),
-  MercuryLocator: require('./locators/SolarStarLocator/planets/MercuryLocator'),
-  VenusLocator: require('./locators/SolarStarLocator/planets/VenusLocator'),
-  EarthLocator: require('./locators/SolarStarLocator/planets/EarthLocator'),
-  MoonLocator: require('./locators/SolarStarLocator/planets/MoonLocator'),
-  MarsLocator: require('./locators/SolarStarLocator/planets/MarsLocator'),
-  JupiterLocator: require('./locators/SolarStarLocator/planets/JupiterLocator'),
-  SaturnLocator: require('./locators/SolarStarLocator/planets/SaturnLocator'),
-  UranusLocator: require('./locators/SolarStarLocator/planets/UranusLocator'),
-  NeptuneLocator: require('./locators/SolarStarLocator/planets/NeptuneLocator'),
-  PlutoLocator: require('./locators/SolarStarLocator/planets/PlutoLocator'),
-  EclipticCoordinate: require('./coords/EclipticCoordinate'),
-  EquinoctialCoordinate: require('./coords/EquinoctialCoordinate'),
-  GalacticCoordinate: require('./coords/GalacticCoordinate'),
-  HorizontalCoordinate: require('./coords/HorizontalCoordinate'),
-  HourAngleCoordinate: require('./coords/HourAngleCoordinate'),
-  SystemSwitcher: require('./coords/SystemSwitcher'),
-  Nutation: require('./corrections/Nutation'),
-  Precession: require('./corrections/Precession'),
-  AnnualAberration: require('./corrections/AnnualAberration'),
-  AnnualParallax: require('./corrections/AnnualParallax'),
-  AtmosphericRefraction: require('./corrections/AtmosphericRefraction'),
-  DiurnalParallax: require('./corrections/DiurnalParallax'),
-  FK5Deflection: require('./corrections/FK5Deflection'),
-  GravitationalDeflection: require('./corrections/GravitationalDeflection'),
-  FSDynamicCalculator: require('./calculators/FixedStarCalculator/DynamicCalculator'),
-  FSTrigonometricCalculator: require('./calculators/FixedStarCalculator/TrigonometricCalculator'),
-  MoonELP2000Calculator: require('./calculators/MoonELP2000Calculator'),
-  Pluto99Calculator: require('./calculators/Pluto99Calculator'),
-  EarthCalculator: require('./calculators/SolarPlanetsCalculator/planets/Earth'),
-  JupiterCalculator: require('./calculators/SolarPlanetsCalculator/planets/Jupiter'),
-  MarsCalculator: require('./calculators/SolarPlanetsCalculator/planets/Mars'),
-  MercuryCalculator: require('./calculators/SolarPlanetsCalculator/planets/Mercury'),
-  NeptuneCalculator: require('./calculators/SolarPlanetsCalculator/planets/Neptune'),
-  SaturnCalculator: require('./calculators/SolarPlanetsCalculator/planets/Saturn'),
-  UranusCalculator: require('./calculators/SolarPlanetsCalculator/planets/Uranus'),
-  VenusCalculator: require('./calculators/SolarPlanetsCalculator/planets/Venus'),
-  EarthSSBCalculator: require('./calculators/EarthSSBCalculator'),
-};
+export default {
+  Coord,
+  Observer,
+  Velocity,
+  JDate,
+  SiderealTime,
+  Angle,
+  SphericalCoordinate3D,
+  CylindricalCoordinate3D,
+  RectangularCoordinate3D,
+  PolarCoordinate2D,
+  RectangularCoordinate2D,
+  Derivator,
+  NewtonSolver,
+  FixedStarLocator,
+  OrbitSystemCrossLocator,
+  SystemCrossLocator,
+  SunLocator,
+  MercuryLocator,
+  VenusLocator,
+  EarthLocator,
+  MoonLocator,
+  MarsLocator,
+  JupiterLocator,
+  SaturnLocator,
+  NeptuneLocator,
+  PlutoLocator,
+  EclipticCoordinate,
+  EquinoctialCoordinate,
+  GalacticCoordinate,
+  HorizontalCoordinate,
+  HourAngleCoordinate,
+  SystemSwitcher,
+  Nutation,
+  Precession,
+  AnnualAberration,
+  AnnualParallax,
+  AtmosphericRefraction,
+  DiurnalParallax,
+  FK5Deflection,
+  GravitationalDeflection,
+  FSDynamicCalculator,
+  FSTrigonometricCalculator,
+  MoonELP2000Calculator,
+  Pluto99Calculator,
+  EarthCalculator,
+  JupiterCalculator,
+  MarsCalculator,
+  MercuryCalculator,
+  NeptuneCalculator,
+  SaturnCalculator,
+  UranusCalculator,
+  VenusCalculator,
+  EarthSSBCalculator,
+}

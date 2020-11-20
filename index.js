@@ -1,5 +1,3 @@
-'use strict';
+import Astraeus from './src/Astraeus';
 
-const Astraeus = require('./src/Astraeus');
-
-module.exports = Astraeus;
+export default Astraeus;

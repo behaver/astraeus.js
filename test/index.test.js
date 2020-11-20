@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Astraeus from "../src/Astraeus";
+import Astraeus from "../index";
 
 describe('#demo', () => {
   it('normally use', () => {
