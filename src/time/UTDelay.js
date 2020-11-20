@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * 计算力学时与世界时之差，即 ΔT = TD - UT，单位为秒
  *
@@ -87,4 +85,4 @@ function UTDelay(year) {
   return res;
 }
 
-module.exports = UTDelay;
+export default UTDelay;

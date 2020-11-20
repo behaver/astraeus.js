@@ -1,8 +1,6 @@
-'use strict'
-
-const SphericalCoordinate3D = require('../math/Coordinate/3d/SphericalCoordinate3D');
-const SiderealTime = require('../time/SiderealTime');
-const Angle = require('../math/angle');
+import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
+import SiderealTime from '../time/SiderealTime';
+import Angle from '../math/angle';
 
 const angle = new Angle;
 
@@ -218,4 +216,4 @@ class DiurnalParallax {
   }
 }
 
-module.exports = DiurnalParallax;
+export default DiurnalParallax;

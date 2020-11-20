@@ -1,10 +1,17 @@
-'use strict';
+// 'use strict';
 
-const expect = require("chai").expect;
-const TrigonometricCalculator = require('../src/calculators/FixedStarCalculator/TrigonometricCalculator');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const TrigonometricCalculator = require('../src/calculators/FixedStarCalculator/TrigonometricCalculator');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import TrigonometricCalculator from '../src/calculators/FixedStarCalculator/TrigonometricCalculator';
+import EquinoctialCoordinate from '../src/coords/EquinoctialCoordinate';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
+
 const angle = new Angle;
 
 describe('#index', () => {

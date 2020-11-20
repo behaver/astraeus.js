@@ -1,8 +1,8 @@
-# Locator
+# Observer
 
 ## Intro 简介
 
-Locator 是用于获取星体定位的组件。
+Observer 是用于获取星体定位的组件。
 
 ## Usage 用例
 
@@ -10,13 +10,13 @@ Locator 是用于获取星体定位的组件。
 const Astraeus = require('@behaver/astraeus.js');
 
 // 实例化天体坐标定位控制器
-let L = new Astraeus.Locator;
+let observer = new Astraeus.Observer;
 
 // 实例化儒略时间
 let JDate = new Astraeus.JDate(new Date(1992, 7, 15, 8, 25), 'date');
 
 // 设置定位参数
-L.onObservatory({
+observer.onObservatory({
   longitude: -124.23,
   latitude: 40.07,
   elevation: 100,
@@ -36,7 +36,7 @@ L.onObservatory({
 }).atTime(JDate);
 
 // 注册恒星 θPersei
-L.registerStar({
+observer.registerStar({
   id: 'θPersei',
   ra: 41.0500,
   dec: 49.2283,
@@ -47,10 +47,10 @@ L.registerStar({
 });
 
 // 获取月亮坐标结果
-let resMoon = L.get('moon');
+let resMoon = observer.get('moon');
 
 // 获取 θPersei 坐标结果
-let resThetaPersei = L.get('θPersei');
+let resThetaPersei = observer.get('θPersei');
 ```
 
 ## API 接口
@@ -109,15 +109,15 @@ let resThetaPersei = L.get('θPersei');
 
   * options.accuracy 精度等级
 
-* `getLocator(id)`
+* `getLocator(name)`
 
 获取星体定位器
 
-* `registerLocator(id, locator)`
+* `registerLocator(name, locator)`
 
 注册星体定位器
 
-* `removeLocator(id)`
+* `removeLocator(name)`
 
 移除星体定位器
 

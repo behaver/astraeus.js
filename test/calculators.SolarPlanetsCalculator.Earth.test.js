@@ -1,7 +1,12 @@
-const expect = require("chai").expect;
-const Earth = require('../src/calculators/SolarPlanetsCalculator/planets/Earth');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const Earth = require('../src/calculators/SolarPlanetsCalculator/planets/Earth');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import Earth from '../src/calculators/SolarPlanetsCalculator/planets/Earth';
+import Angle from '../src/math/Angle';
+import JDateRepository from '../src/time/JDate/JDateRepository';
 
 const angle = new Angle;
 

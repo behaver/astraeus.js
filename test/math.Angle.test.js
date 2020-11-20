@@ -1,5 +1,8 @@
-const Angle = require('../src/math/Angle');
-const expect = require("chai").expect;
+// const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import Angle from '../src/math/Angle';
 
 describe('#index.js', () => {
   describe('#constructor', () => {

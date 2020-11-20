@@ -1,9 +1,7 @@
-'use strict';
-
-const JDateRepository = require('../time/JDate/JDateRepository');
+import JDateRepository from '../time/JDate/JDateRepository';
 
 /**
- * CelestialLocator
+ * Locator
  * 
  * 天球坐标定位器
  * 
@@ -12,7 +10,7 @@ const JDateRepository = require('../time/JDate/JDateRepository');
  * @private
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class CelestialLocator {
+class Locator {
 
   /**
    * 构造函数
@@ -28,7 +26,7 @@ class CelestialLocator {
    * 
    * @param  {Object}           options 定位器计算参数
    * 
-   * @return {CelestialLocator}         返回 this 引用
+   * @return {Locator}         返回 this 引用
    */
   options({
     id,
@@ -95,4 +93,4 @@ class CelestialLocator {
   }
 }
 
-module.exports = CelestialLocator;
+export default Locator;

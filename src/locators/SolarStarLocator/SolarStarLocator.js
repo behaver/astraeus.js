@@ -1,8 +1,6 @@
-'use strict';
-
-const CelestialLocator = require('../CelestialLocator');
-const EclipticCoordinate = require('../../coords/EclipticCoordinate');
-const JDateRepository = require('../../time/JDate/JDateRepository');
+import Locator from '../Locator';
+import EclipticCoordinate from '../../coords/EclipticCoordinate';
+import JDateRepository from '../../time/JDate/JDateRepository';
 
 /**
  * SolarStarLocator
@@ -13,7 +11,7 @@ const JDateRepository = require('../../time/JDate/JDateRepository');
  *
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class SolarStarLocator extends CelestialLocator {
+class SolarStarLocator extends Locator {
 
   /**
    * 构造函数
@@ -112,4 +110,4 @@ class SolarStarLocator extends CelestialLocator {
   }
 }
 
-module.exports = SolarStarLocator;
+export default SolarStarLocator;

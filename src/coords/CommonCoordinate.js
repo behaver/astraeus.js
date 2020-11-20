@@ -1,8 +1,6 @@
-'use strict';
-
-const SphericalCoordinate3D = require('../math/Coordinate/3d/SphericalCoordinate3D');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const Angle = require('../math/Angle');
+import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
+import JDateRepository from '../time/JDate/JDateRepository';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -217,4 +215,4 @@ class CommonCoordinate {
   }
 }
 
-module.exports = CommonCoordinate;
+export default CommonCoordinate;

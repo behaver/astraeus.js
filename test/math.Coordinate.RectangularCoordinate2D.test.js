@@ -1,5 +1,8 @@
-const RectangularCoordinate2D = require('../src/math/Coordinate/2d/RectangularCoordinate2D');
-const expect = require("chai").expect;
+// const RectangularCoordinate2D = require('../src/math/Coordinate/2d/RectangularCoordinate2D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import RectangularCoordinate2D from '../src/math/Coordinate/2d/RectangularCoordinate2D';
 
 describe('#RectangularCoordinate2D', () => {
   describe('#constructor', () => {

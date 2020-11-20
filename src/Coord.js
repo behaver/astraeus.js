@@ -1,11 +1,9 @@
-'use strict';
-
-const SystemSwitcher = require('./coords/SystemSwitcher');
-const HorizontalCoordinate = require('./coords/HorizontalCoordinate');
-const HourAngleCoordinate = require('./coords/HourAngleCoordinate');
-const EquinoctialCoordinate = require('./coords/EquinoctialCoordinate');
-const EclipticCoordinate = require('./coords/EclipticCoordinate');
-const GalacticCoordinate = require('./coords/GalacticCoordinate');
+import SystemSwitcher from './coords/SystemSwitcher';
+import HorizontalCoordinate from './coords/HorizontalCoordinate';
+import HourAngleCoordinate from './coords/HourAngleCoordinate';
+import EquinoctialCoordinate from './coords/EquinoctialCoordinate';
+import EclipticCoordinate from './coords/EclipticCoordinate';
+import GalacticCoordinate from './coords/GalacticCoordinate';
 
 /**
  * Coord
@@ -102,4 +100,4 @@ class Coord {
   }
 }
 
-module.exports = Coord;
+export default Coord;

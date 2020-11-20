@@ -1,9 +1,13 @@
-const expect = require("chai").expect;
-const CelestialVelocity = require('../src/velocity/CelestialVelocity');
-const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
-const CelestialLocator = require('../src/locators/CelestialLocator');
+// const expect = require("chai").expect;
+// const CelestialVelocity = require('../src/velocity/CelestialVelocity');
+// const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const CelestialLocator = require('../src/locators/CelestialLocator');
+
+import { expect } from 'chai';
+import CelestialVelocity from '../src/velocity/CelestialVelocity';
+import MoonLocator from '../src/locators/SolarStarLocator/planets/Moon';
 
 describe('#CelestialVelocity', () => {
   describe('#Verify', () => {

@@ -1,5 +1,8 @@
-const Transformer3D = require('../src/math/Coordinate/3d/Transformer3D');
-const expect = require("chai").expect;
+// const Transformer3D = require('../src/math/Coordinate/3d/Transformer3D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import Transformer3D from '../src/math/Coordinate/3d/Transformer3D';
 
 describe('#Transformer3D', () => {
   describe('#constructor', () => {

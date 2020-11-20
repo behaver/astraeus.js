@@ -1,8 +1,14 @@
-const expect = require("chai").expect;
-const VSOP87Calculator = require('../src/calculators/SolarPlanetsCalculator/VSOP87Calculator');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const dataArray = require('../src/calculators/SolarPlanetsCalculator/data/Earth/l');
-const b = require('../src/calculators/SolarPlanetsCalculator/data/Earth/b');
+// const expect = require("chai").expect;
+// const VSOP87Calculator = require('../src/calculators/SolarPlanetsCalculator/VSOP87Calculator');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const dataArray = require('../src/calculators/SolarPlanetsCalculator/data/Earth/l');
+// const b = require('../src/calculators/SolarPlanetsCalculator/data/Earth/b');
+
+import { expect } from 'chai';
+import VSOP87Calculator from '../src/calculators/SolarPlanetsCalculator/VSOP87Calculator';
+import dataArray from '../src/calculators/SolarPlanetsCalculator/data/Earth/l';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import b from '../src/calculators/SolarPlanetsCalculator/data/Earth/b';
 
 describe('#VSOP87Calculator', () => {
   describe('#constructor(jdr)', () => {

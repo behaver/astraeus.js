@@ -1,9 +1,7 @@
-'use strict';
-
-const EarthCalculator = require('../../../calculators/SolarPlanetsCalculator/planets/Earth');
-const SaturnCalculator = require('../../../calculators/SolarPlanetsCalculator/planets/Saturn');
-const SolarStarLocator = require('../SolarStarLocator');
-const LightTimeEffect = require('../LightTimeEffect');
+import EarthCalculator from '../../../calculators/SolarPlanetsCalculator/planets/Earth';
+import SaturnCalculator from '../../../calculators/SolarPlanetsCalculator/planets/Saturn';
+import SolarStarLocator from '../SolarStarLocator';
+import LightTimeEffect from '../LightTimeEffect';
 
 /**
  * SaturnLocator
@@ -38,4 +36,4 @@ class SaturnLocator extends SolarStarLocator {
   }
 }
 
-module.exports = SaturnLocator;
+export default SaturnLocator;

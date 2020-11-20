@@ -1,8 +1,6 @@
-'use strict';
-
-const SphericalCoordinate3D = require('../math/Coordinate/3d/SphericalCoordinate3D');
-const Precession = require('./Precession');
-const Angle = require('../math/angle');
+import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
+import Precession from './Precession';
+import Angle from '../math/angle';
 
 const angle = new Angle;
 
@@ -94,4 +92,4 @@ class FK5Deflection {
   }
 }
 
-module.exports = FK5Deflection;
+export default FK5Deflection;

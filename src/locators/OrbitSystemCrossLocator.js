@@ -1,10 +1,8 @@
-'use strict';
-
-const CelestialLocator = require('./CelestialLocator');
-const Coord = require('../Coord');
-const NewtonSolver = require('../math/UnaryToolkit/NewtonSolver');
-const CelestialVelocity = require('../velocity/CelestialVelocity');
-const JDateRepository = require('../time/JDate/JDateRepository');
+import Locator from './Locator';
+import Coord from '../Coord';
+import NewtonSolver from '../math/UnaryToolkit/NewtonSolver';
+import JDateRepository from '../time/JDate/JDateRepository';
+import CelestialVelocity from '../velocity/CelestialVelocity';
 
 /**
  * OrbitSystemCrossLocator
@@ -13,7 +11,7 @@ const JDateRepository = require('../time/JDate/JDateRepository');
  *
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class OrbitSystemCrossLocator extends CelestialLocator {
+class OrbitSystemCrossLocator extends Locator {
 
   /**
    * 构造函数
@@ -39,7 +37,7 @@ class OrbitSystemCrossLocator extends CelestialLocator {
    * 
    * @param  {String}                  options.id           位置id
    * @param  {JDateRepository}         options.time         儒略时间对象
-   * @param  {CelestialLocator}        options.orbit        轨道坐标定位器
+   * @param  {Locator}                 options.orbit        轨道坐标定位器
    * @param  {String}                  options.sys          天球系统
    * @param  {Boolean}                 options.direction    交点方向
    * @param  {Coord}                   options.coordHandler 天球坐标控制器
@@ -159,17 +157,17 @@ class OrbitSystemCrossLocator extends CelestialLocator {
   /**
    * 设置 轨道坐标定位器
    * 
-   * @param {CelestialLocator} value 轨道坐标定位器
+   * @param {Locator} value 轨道坐标定位器
    */
   set orbit(value) {
-    if (!(value instanceof CelestialLocator)) throw Error('The param value should be a CelestialLocator.');
+    if (!(value instanceof Locator)) throw Error('The param value should be a Locator.');
     this.private.orbit = value;
   }
 
   /**
    * 获取 轨道坐标定位器
    * 
-   * @return {CelestialLocator} 轨道坐标定位器
+   * @return {Locator} 轨道坐标定位器
    */
   get orbit() {
     return this.private.orbit;
@@ -234,4 +232,4 @@ class OrbitSystemCrossLocator extends CelestialLocator {
   }
 }
 
-module.exports = OrbitSystemCrossLocator;
+export default OrbitSystemCrossLocator;

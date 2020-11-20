@@ -1,4 +1,3 @@
-'use strict';
 
 /**
  * Angle
@@ -524,4 +523,4 @@ class Angle {
   }
 };
 
-module.exports = Angle;
+export default Angle;

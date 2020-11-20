@@ -1,8 +1,14 @@
-const expect = require("chai").expect;
-const GravitationalDeflection = require("../src/corrections/GravitationalDeflection");
-const JDateRepository = require("../src/time/JDate/JDateRepository");
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const GravitationalDeflection = require("../src/corrections/GravitationalDeflection");
+// const JDateRepository = require("../src/time/JDate/JDateRepository");
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
+import GravitationalDeflection from "../src/corrections/GravitationalDeflection";
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

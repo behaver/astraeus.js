@@ -1,7 +1,12 @@
-const expect = require("chai").expect;
-const MarsLocator = require('../src/locators/SolarStarLocator/planets/Mars');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const expect = require("chai").expect;
+// const MarsLocator = require('../src/locators/SolarStarLocator/planets/Mars');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import SystemSwitcher from '../src/coords/SystemSwitcher';
+import MarsLocator from '../src/locators/SolarStarLocator/planets/Mars';
 
 describe('#MarsLocator', () => {
   describe('#Verify', () => {

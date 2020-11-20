@@ -1,5 +1,8 @@
-const RectangularCoordinate3D = require('../src/math/Coordinate/3d/RectangularCoordinate3D');
-const expect = require("chai").expect;
+// const RectangularCoordinate3D = require('../src/math/Coordinate/3d/RectangularCoordinate3D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import RectangularCoordinate3D from '../src/math/Coordinate/3d/RectangularCoordinate3D';
 
 describe('#RectangularCoordinate3D', () => {
   describe('#constructor', () => {

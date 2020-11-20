@@ -1,6 +1,10 @@
-const expect = require("chai").expect;
-const PlanetHECCOnVSOP87 = require('../src/calculators/SolarPlanetsCalculator/PlanetCalculator');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const expect = require("chai").expect;
+// const PlanetHECCOnVSOP87 = require('../src/calculators/SolarPlanetsCalculator/PlanetCalculator');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+
+import { expect } from 'chai';
+import PlanetHECCOnVSOP87 from '../src/calculators/SolarPlanetsCalculator/PlanetCalculator';
+import JDateRepository from '../src/time/JDate/JDateRepository';
 
 describe('#PlanetHECCOnVSOP87', () => {
 	describe('#constructor', () => {

@@ -1,10 +1,8 @@
-'use strict';
-
-const EarthCalculator = require('../../../calculators/SolarPlanetsCalculator/planets/Earth');
-const SolarStarLocator = require('../SolarStarLocator');
-const LightTimeEffect = require('../LightTimeEffect');
-const EclipticCoordinate = require('../../../coords/EclipticCoordinate');
-const SphericalCoordinate3D = require('../../../math/Coordinate/3d/SphericalCoordinate3D');
+import EarthCalculator from '../../../calculators/SolarPlanetsCalculator/planets/Earth';
+import SolarStarLocator from '../SolarStarLocator';
+import LightTimeEffect from '../LightTimeEffect';
+import EclipticCoordinate from '../../../coords/EclipticCoordinate';
+import SphericalCoordinate3D from '../../../math/Coordinate/3d/SphericalCoordinate3D';
 
 /**
  * SunLocator
@@ -75,4 +73,4 @@ class SunLocator extends SolarStarLocator {
   }
 }
 
-module.exports = SunLocator;
+export default SunLocator;

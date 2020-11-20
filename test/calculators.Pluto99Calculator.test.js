@@ -1,9 +1,16 @@
-const expect = require("chai").expect;
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const Pluto99HECC = require('../src/calculators/Pluto99Calculator');
-const RectangularCoordinate3D = require('../src/math/Coordinate/3d/RectangularCoordinate3D');
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
+// const expect = require("chai").expect;
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const Pluto99HECC = require('../src/calculators/Pluto99Calculator');
+// const RectangularCoordinate3D = require('../src/math/Coordinate/3d/RectangularCoordinate3D');
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
+
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
+import Pluto99HECC from '../src/calculators/Pluto99Calculator';
+import EclipticCoordinate from '../src/coords/EclipticCoordinate';
+import RectangularCoordinate3D from '../src/math/Coordinate/3d/RectangularCoordinate3D';
+import JDateRepository from '../src/time/JDate/JDateRepository';
 
 describe('#Pluto99HECC', () => {
   describe('#constructor(jdate)', () => {

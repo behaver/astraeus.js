@@ -1,9 +1,16 @@
-const expect = require("chai").expect;
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const Angle = require('../src/math/Angle');
-const GalacticCoordinate = require('../src/coords/GalacticCoordinate');
-const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+// const expect = require("chai").expect;
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const Angle = require('../src/math/Angle');
+// const GalacticCoordinate = require('../src/coords/GalacticCoordinate');
+// const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
+import EquinoctialCoordinate from '../src/coords/EquinoctialCoordinate';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
+import GalacticCoordinate from '../src/coords/GalacticCoordinate';
 
 const angle = new Angle;
 

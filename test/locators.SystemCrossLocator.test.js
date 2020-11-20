@@ -1,8 +1,14 @@
-const expect = require("chai").expect;
-const SystemCrossLocator = require('../src/locators/SystemCrossLocator');
-const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const Coord = require('../src/Coord');
+// const expect = require("chai").expect;
+// const SystemCrossLocator = require('../src/locators/SystemCrossLocator');
+// const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const Coord = require('../src/Coord');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import HorizontalCoordinate from '../src/coords/HorizontalCoordinate';
+import SystemCrossLocator from '../src/locators/SystemCrossLocator';
+import Coord from '../src/Coord';
 
 describe('#SystemCrossLocator', () => {
   describe('#Verify', () => {

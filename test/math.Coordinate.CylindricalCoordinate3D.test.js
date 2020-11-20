@@ -1,5 +1,8 @@
-const CylindricalCoordinate3D = require('../src/math/Coordinate/3d/CylindricalCoordinate3D');
-const expect = require("chai").expect;
+// const CylindricalCoordinate3D = require('../src/math/Coordinate/3d/CylindricalCoordinate3D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import CylindricalCoordinate3D from '../src/math/Coordinate/3d/CylindricalCoordinate3D';
 
 describe('#CylindricalCoordinate3D', () => {
   describe('#constructor', () => {

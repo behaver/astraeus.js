@@ -1,8 +1,15 @@
-const expect = require("chai").expect;
-const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import SystemSwitcher from '../src/coords/SystemSwitcher';
+import MoonLocator from '../src/locators/SolarStarLocator/planets/Moon';
+import Angle from '../src/math/Angle';
+
 const angle = new Angle;
 
 describe('#MoonLocator', () => {
@@ -62,7 +69,9 @@ describe('#MoonLocator', () => {
       let ECC = MP.get().coord;
 
       ECC.on({
+        enableNutation: true,
         withNutation: true,
+        enableAnnualAberration: true,
         withAnnualAberration: true,
         enableGravitationalDeflection: true,
         withGravitationalDeflection: true,

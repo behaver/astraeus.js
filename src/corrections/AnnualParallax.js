@@ -1,6 +1,4 @@
-'use strict';
-
-const EarthSSBCalculator = require('../calculators/EarthSSBCalculator');
+import EarthSSBCalculator from '../calculators/EarthSSBCalculator';
 
 /**
  * AnnualParallax
@@ -79,4 +77,4 @@ class AnnualParallax {
   }
 }
 
-module.exports = AnnualParallax;
+export default AnnualParallax;

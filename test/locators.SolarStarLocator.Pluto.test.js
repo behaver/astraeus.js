@@ -1,6 +1,10 @@
-const expect = require("chai").expect;
-const PlutoLocator = require('../src/locators/SolarStarLocator/planets/Pluto');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const expect = require("chai").expect;
+// const PlutoLocator = require('../src/locators/SolarStarLocator/planets/Pluto');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import PlutoLocator from '../src/locators/SolarStarLocator/planets/Pluto';
 
 describe('#PlutoLocator', () => {
   describe('#verify', () => {

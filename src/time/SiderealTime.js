@@ -1,10 +1,8 @@
-'use strict';
-
-const JDateRepository = require('./JDate/JDateRepository');
-const CacheSpaceOnJDate = require('./JDate/CacheSpaceOnJDate');
-const Precession = require('../corrections/Precession');
-const Nutation = require('../corrections/Nutation');
-const Angle = require('../math/Angle');
+import JDateRepository from './JDate/JDateRepository';
+import CacheSpaceOnJDate from './JDate/CacheSpaceOnJDate';
+import Precession from '../corrections/Precession';
+import Nutation from '../corrections/Nutation';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -90,4 +88,4 @@ class SiderealTime {
   }
 }
 
-module.exports = SiderealTime;
+export default SiderealTime;

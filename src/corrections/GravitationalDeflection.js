@@ -1,8 +1,6 @@
-'use strict';
-
-const SphericalCoordinate3D = require('../math/Coordinate/3d/SphericalCoordinate3D');
-const EarthCalculator = require('../calculators/SolarPlanetsCalculator/planets/Earth');
-const Precession = require('./Precession');
+import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
+import EarthCalculator from '../calculators/SolarPlanetsCalculator/planets/Earth';
+import Precession from './Precession';
 
 /**
  * GravitationalDeflection
@@ -106,4 +104,4 @@ class GravitationalDeflection {
   }
 }
 
-module.exports = GravitationalDeflection;
+export default GravitationalDeflection;

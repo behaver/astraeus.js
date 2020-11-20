@@ -1,5 +1,8 @@
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const expect = require("chai").expect;
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
 
 describe("#JDateRepository", () => {
   describe('#constructor(d, dtype)', () => {

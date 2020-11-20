@@ -1,10 +1,8 @@
-'use strict';
-
-const CommonCoordinate = require('./CommonCoordinate');
-const EquinoctialCoordinate = require('./EquinoctialCoordinate');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const SiderealTime = require('../time/SiderealTime');
-const Angle = require('../math/Angle');
+import CommonCoordinate from './CommonCoordinate';
+import EquinoctialCoordinate from './EquinoctialCoordinate';
+import JDateRepository from '../time/JDate/JDateRepository';
+import SiderealTime from '../time/SiderealTime';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -202,4 +200,4 @@ class HourAngleCoordinate extends CommonCoordinate {
   }
 }
 
-module.exports = HourAngleCoordinate;
+export default HourAngleCoordinate;

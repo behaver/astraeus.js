@@ -1,30 +1,28 @@
-'use strict';
+import Locator from './locators/Locator';
+import FixedStarLocator from './locators/FixedStarLocator';
+import SunLocator from './locators/SolarStarLocator/planets/Sun';
+import MercuryLocator from './locators/SolarStarLocator/planets/Mercury';
+import VenusLocator from './locators/SolarStarLocator/planets/Venus';
+import EarthLocator from './locators/SolarStarLocator/planets/Earth';
+import MoonLocator from './locators/SolarStarLocator/planets/Moon';
+import MarsLocator from './locators/SolarStarLocator/planets/Mars';
+import JupiterLocator from './locators/SolarStarLocator/planets/Jupiter';
+import SaturnLocator from './locators/SolarStarLocator/planets/Saturn';
+import UranusLocator from './locators/SolarStarLocator/planets/Uranus';
+import NeptuneLocator from './locators/SolarStarLocator/planets/Neptune';
+import PlutoLocator from './locators/SolarStarLocator/planets/Pluto';
 
-const CelestialLocator = require('./locators/CelestialLocator');
-const FixedStarLocator = require('./locators/FixedStarLocator');
-const SunLocator = require('./locators/SolarStarLocator/planets/Sun');
-const MercuryLocator = require('./locators/SolarStarLocator/planets/Mercury');
-const VenusLocator = require('./locators/SolarStarLocator/planets/Venus');
-const EarthLocator = require('./locators/SolarStarLocator/planets/Earth');
-const MoonLocator = require('./locators/SolarStarLocator/planets/Moon');
-const MarsLocator = require('./locators/SolarStarLocator/planets/Mars');
-const JupiterLocator = require('./locators/SolarStarLocator/planets/Jupiter');
-const SaturnLocator = require('./locators/SolarStarLocator/planets/Saturn');
-const UranusLocator = require('./locators/SolarStarLocator/planets/Uranus');
-const NeptuneLocator = require('./locators/SolarStarLocator/planets/Neptune');
-const PlutoLocator = require('./locators/SolarStarLocator/planets/Pluto');
-
-const JDateRepository = require('./time/JDate/JDateRepository');
-const Coord = require('./Coord');
+import JDateRepository from './time/JDate/JDateRepository';
+import Coord from './Coord';
 
 /**
- * Locator
+ * Observer
  *
  * 星体定位器
  *
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class Locator {
+class Observer {
 
   /**
    * 构造函数
@@ -316,7 +314,7 @@ class Locator {
    * 
    * @param  {String}           id 星体id
    * 
-   * @return {CelestialLocator}    星体定位器
+   * @return {Locator}    星体定位器
    */
   getLocator(id) {
     if (id === 'fixed') return this.private.FixedStarLocator;
@@ -327,13 +325,13 @@ class Locator {
    * 注册 星体定位器
    * 
    * @param  {String}           id      星体id
-   * @param  {CelestialLocator} locator 星体定位器
+   * @param  {Locator} locator 星体定位器
    * 
    * @return {Locator}                  返回 this 引用
    */
   registerLocator(id, locator) {
     if (typeof(id) !== 'string') throw Error('The param id should be a String.');
-    if (!(locator instanceof CelestialLocator)) throw Error('The param locator should be an instance of CelestialLocator');
+    if (!(locator instanceof Locator)) throw Error('The param locator should be an instance of Locator');
 
     let options = {
       time: this.private.time,
@@ -553,4 +551,4 @@ class Locator {
 
 }
 
-module.exports = Locator;
+export default Observer;

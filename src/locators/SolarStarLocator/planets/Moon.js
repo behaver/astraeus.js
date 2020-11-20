@@ -1,10 +1,8 @@
-'use strict';
-
-const SolarStarLocator = require('../SolarStarLocator');
-const LightTimeEffect = require('../LightTimeEffect');
-const MoonCalculator = require('../../../calculators/MoonELP2000Calculator');
-const EclipticCoordinate = require('../../../coords/EclipticCoordinate');
-const SphericalCoordinate3D = require('../../../math/Coordinate/3d/SphericalCoordinate3D');
+import SolarStarLocator from '../SolarStarLocator';
+import LightTimeEffect from '../LightTimeEffect';
+import MoonCalculator from '../../../calculators/MoonELP2000Calculator';
+import EclipticCoordinate from '../../../coords/EclipticCoordinate';
+import SphericalCoordinate3D from '../../../math/Coordinate/3d/SphericalCoordinate3D';
 
 /**
  * MoonLocator
@@ -73,4 +71,4 @@ class MoonLocator extends SolarStarLocator {
   }
 }
 
-module.exports = MoonLocator;
+export default MoonLocator;

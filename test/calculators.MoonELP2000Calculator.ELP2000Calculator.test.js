@@ -1,12 +1,20 @@
-'use strict';
+// 'use strict';
 
-const expect = require("chai").expect;
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const ELP2000Calculator = require('../src/calculators/MoonELP2000Calculator/ELP2000Calculator');
+// const expect = require("chai").expect;
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const ELP2000Calculator = require('../src/calculators/MoonELP2000Calculator/ELP2000Calculator');
 
-const DataL = require('../src/calculators/MoonELP2000Calculator/data/l');
-const DataB = require('../src/calculators/MoonELP2000Calculator/data/b');
-const DataR = require('../src/calculators/MoonELP2000Calculator/data/r');
+// const DataL = require('../src/calculators/MoonELP2000Calculator/data/l');
+// const DataB = require('../src/calculators/MoonELP2000Calculator/data/b');
+// const DataR = require('../src/calculators/MoonELP2000Calculator/data/r');
+
+import { expect } from 'chai';
+import ELP2000Calculator from '../src/calculators/MoonELP2000Calculator/ELP2000Calculator';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+
+import DataL from '../src/calculators/MoonELP2000Calculator/data/l';
+import DataB from '../src/calculators/MoonELP2000Calculator/data/b';
+import DataR from '../src/calculators/MoonELP2000Calculator/data/r';
 
 describe('#ELP2000Calculator', () => {
   describe('#constructor(jdr)', () => {

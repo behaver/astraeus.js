@@ -1,5 +1,8 @@
-const calcUTDelay = require('../src/time/UTDelay');
-const expect = require("chai").expect;
+// const calcUTDelay = require('../src/time/UTDelay');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import calcUTDelay from '../src/time/UTDelay';
 
 describe('#index.js', () => {
   describe('#Logic', () => {

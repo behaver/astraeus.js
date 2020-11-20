@@ -1,8 +1,6 @@
-'use strict';
-
-const JDateRepository = require('../time/JDate/JDateRepository');
-const CacheSpaceOnJDate = require('../time/JDate/CacheSpaceOnJDate');
-const RectangularCoordinate3D = require('../math/Coordinate/3d/RectangularCoordinate3D');
+import JDateRepository from '../time/JDate/JDateRepository';
+import CacheSpaceOnJDate from '../time/JDate/CacheSpaceOnJDate';
+import RectangularCoordinate3D from '../math/Coordinate/3d/RectangularCoordinate3D';
 
 /**
  * EarthSSBVelocity
@@ -257,4 +255,4 @@ class EarthSSBVelocity {
   }
 }
 
-module.exports = EarthSSBVelocity;
+export default EarthSSBVelocity;

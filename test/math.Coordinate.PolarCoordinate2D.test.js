@@ -1,5 +1,9 @@
-const PolarCoordinate2D = require('../src/math/Coordinate/2d/PolarCoordinate2D');
-const expect = require("chai").expect;
+// const PolarCoordinate2D = require('../src/math/Coordinate/2d/PolarCoordinate2D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import PolarCoordinate2D from '../src/math/Coordinate/2d/PolarCoordinate2D';
+
 
 describe('#PolarCoordinate2D', () => {
   describe('#constructor', () => {

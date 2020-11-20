@@ -1,5 +1,8 @@
-const Derivator = require('../src/math/UnaryToolkit/Derivator');
-const expect = require("chai").expect;
+// const Derivator = require('../src/math/UnaryToolkit/Derivator');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import Derivator from '../src/math/UnaryToolkit/Derivator';
 
 describe('#Derivator', () => {
   describe('#Verify', () => {

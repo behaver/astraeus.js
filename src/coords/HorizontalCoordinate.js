@@ -1,12 +1,10 @@
-'use strict';
-
-const CommonCoordinate = require('./CommonCoordinate');
-const EquinoctialCoordinate = require('./EquinoctialCoordinate');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const SiderealTime = require('../time/SiderealTime');
-const DiurnalParallax = require('../corrections/DiurnalParallax');
-const AtmosphericRefraction = require('../corrections/AtmosphericRefraction');
-const Angle = require('../math/Angle');
+import CommonCoordinate from './CommonCoordinate';
+import EquinoctialCoordinate from './EquinoctialCoordinate';
+import JDateRepository from '../time/JDate/JDateRepository';
+import SiderealTime from '../time/SiderealTime';
+import DiurnalParallax from '../corrections/DiurnalParallax';
+import AtmosphericRefraction from '../corrections/AtmosphericRefraction';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -517,4 +515,4 @@ class HorizontalCoordinate extends CommonCoordinate {
   }
 }
 
-module.exports = HorizontalCoordinate;
+export default HorizontalCoordinate;

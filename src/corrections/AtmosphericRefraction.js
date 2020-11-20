@@ -1,6 +1,5 @@
-'use strict'
+import Angle from '../math/angle';
 
-const Angle = require('../math/Angle');
 const angle = new Angle;
 
 /**
@@ -265,4 +264,4 @@ class AtmosphericRefraction {
   }
 }
 
-module.exports = AtmosphericRefraction;
+export default AtmosphericRefraction;

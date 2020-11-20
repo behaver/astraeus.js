@@ -1,15 +1,13 @@
-'use strict';
-
-const CommonCoordinate = require('./CommonCoordinate');
-const Precession = require('../corrections/Precession');
-const Nutation = require('../corrections/Nutation');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const CacheSpaceOnJDate = require('../time/JDate/CacheSpaceOnJDate');
-const AnnualAberration = require('../corrections/AnnualAberration');
-const GravitationalDeflection = require('../corrections/GravitationalDeflection');
-const FK5Deflection = require('../corrections/FK5Deflection');
-const EarthCalculator = require('../calculators/SolarPlanetsCalculator/planets/Earth');
-const Angle = require('../math/Angle');
+import CommonCoordinate from './CommonCoordinate';
+import Precession from '../corrections/Precession';
+import Nutation from '../corrections/Nutation';
+import JDateRepository from '../time/JDate/JDateRepository';
+import CacheSpaceOnJDate from '../time/JDate/CacheSpaceOnJDate';
+import AnnualAberration from '../corrections/AnnualAberration';
+import GravitationalDeflection from '../corrections/GravitationalDeflection';
+import FK5Deflection from '../corrections/FK5Deflection';
+import EarthCalculator from '../calculators/SolarPlanetsCalculator/planets/Earth';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -818,4 +816,4 @@ class EclipticCoordinate extends CommonCoordinate {
   }
 }
 
-module.exports = EclipticCoordinate;
+export default EclipticCoordinate;

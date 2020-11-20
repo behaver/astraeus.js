@@ -1,7 +1,12 @@
-const expect = require("chai").expect;
-const OrbitSystemCrossLocator = require('../src/locators/OrbitSystemCrossLocator');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
+// const expect = require("chai").expect;
+// const OrbitSystemCrossLocator = require('../src/locators/OrbitSystemCrossLocator');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const MoonLocator = require('../src/locators/SolarStarLocator/planets/Moon');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import OrbitSystemCrossLocator from '../src/locators/OrbitSystemCrossLocator';
+import MoonLocator from '../src/locators/SolarStarLocator/planets/Moon';
 
 describe('#OrbitSystemCrossLocator', () => {
   describe('#Verify', () => {

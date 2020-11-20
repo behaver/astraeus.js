@@ -1,10 +1,9 @@
-'use strict';
+import CommonCoordinate from './CommonCoordinate';
+import EquinoctialCoordinate from './EquinoctialCoordinate';
+import SphericalCoordinate3D from '../math/Coordinate/3d/SphericalCoordinate3D';
+import JDateRepository from '../time/JDate/JDateRepository';
+import Angle from '../math/Angle';
 
-const CommonCoordinate = require('./CommonCoordinate');
-const EquinoctialCoordinate = require('./EquinoctialCoordinate');
-const SphericalCoordinate3D = require('../math/Coordinate/3d/SphericalCoordinate3D');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const Angle = require('../math/Angle');
 const angle = new Angle;
 
 /**
@@ -205,4 +204,4 @@ class GalacticCoordinate extends CommonCoordinate {
   }
 }
 
-module.exports = GalacticCoordinate;
+export default GalacticCoordinate;

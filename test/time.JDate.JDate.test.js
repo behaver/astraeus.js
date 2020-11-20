@@ -1,5 +1,8 @@
-const JDate = require('../src/time/JDate/JDate');
-const expect = require("chai").expect;
+// const JDate = require('../src/time/JDate/JDate');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import JDate from '../src/time/JDate/JDate';
 
 describe('#Logic', () => {
   describe('#constructor(d, dtype)', () => {

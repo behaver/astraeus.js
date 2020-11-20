@@ -1,14 +1,12 @@
-'use strict';
-
-const CommonCoordinate = require('./CommonCoordinate');
-const Precession = require('../corrections/Precession');
-const Nutation = require('../corrections/Nutation');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const CacheSpaceOnJDate = require('../time/JDate/CacheSpaceOnJDate');
-const AnnualAberration = require('../corrections/AnnualAberration');
-const GravitationalDeflection = require('../corrections/GravitationalDeflection');
-const FK5Deflection = require('../corrections/FK5Deflection');
-const Angle = require('../math/Angle');
+import CommonCoordinate from './CommonCoordinate';
+import Precession from '../corrections/Precession/index';
+import Nutation from '../corrections/Nutation/index';
+import JDateRepository from '../time/JDate/JDateRepository';
+import CacheSpaceOnJDate from '../time/JDate/CacheSpaceOnJDate';
+import AnnualAberration from '../corrections/AnnualAberration';
+import GravitationalDeflection from '../corrections/GravitationalDeflection';
+import FK5Deflection from '../corrections/FK5Deflection';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
@@ -765,4 +763,4 @@ class EquinoctialCoordinate extends CommonCoordinate {
   }
 }
 
-module.exports = EquinoctialCoordinate;
+export default EquinoctialCoordinate;

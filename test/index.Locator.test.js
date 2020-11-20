@@ -1,13 +1,20 @@
-const expect = require("chai").expect;
+// const expect = require("chai").expect;
 
-const Locator = require('../src/Locator');
-const JDate = require('../src/time/JDate/JDateRepository');
-const CommonCoordinate = require('../src/coords/CommonCoordinate');
-const SystemCrossLocator = require('../src/locators/SystemCrossLocator');
-const OrbitSystemCrossLocator = require('../src/locators/OrbitSystemCrossLocator');
+// const Locator = require('../src/Locator');
+// const JDate = require('../src/time/JDate/JDateRepository');
+// const CommonCoordinate = require('../src/coords/CommonCoordinate');
+// const SystemCrossLocator = require('../src/locators/SystemCrossLocator');
+// const OrbitSystemCrossLocator = require('../src/locators/OrbitSystemCrossLocator');
 
-describe('#Locator', () => {
-  let L = new Locator,
+import { expect } from 'chai';
+import Observer from '../src/Observer';
+import JDate from '../src/time/JDate/JDateRepository';
+import CommonCoordinate from '../src/coords/CommonCoordinate';
+import SystemCrossLocator from '../src/locators/SystemCrossLocator';
+import OrbitSystemCrossLocator from '../src/locators/OrbitSystemCrossLocator';
+
+describe('#Observer', () => {
+  let L = new Observer,
       time = new JDate(new Date(1992, 7, 15, 8, 25), 'date');
 
   L.onObservatory({

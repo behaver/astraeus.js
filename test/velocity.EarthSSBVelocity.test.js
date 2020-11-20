@@ -1,7 +1,12 @@
-const expect = require("chai").expect;
-const Velocity = require('../src/velocity/EarthSSBVelocity');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const Velocity = require('../src/velocity/EarthSSBVelocity');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import Velocity from '../src/velocity/EarthSSBVelocity';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

@@ -1,11 +1,20 @@
-const expect = require("chai").expect;
-const DiurnalParallax = require('../src/corrections/DiurnalParallax');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SiderealTime = require('../src/time/SiderealTime');
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const DiurnalParallax = require('../src/corrections/DiurnalParallax');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SiderealTime = require('../src/time/SiderealTime');
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
+import DiurnalParallax from "../src/corrections/DiurnalParallax";
+import SiderealTime from '../src/time/SiderealTime';
+import EquinoctialCoordinate from '../src/coords/EquinoctialCoordinate';
+import SystemSwitcher from '../src/coords/SystemSwitcher';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

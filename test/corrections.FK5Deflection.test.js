@@ -1,9 +1,15 @@
-const FK5Deflection = require("../src/corrections/FK5Deflection");
-const JDateRepository = require("../src/time/JDate/JDateRepository");
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const Angle = require('../src/math/Angle');
+// const FK5Deflection = require("../src/corrections/FK5Deflection");
+// const JDateRepository = require("../src/time/JDate/JDateRepository");
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
 
-const expect = require("chai").expect;
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
+import FK5Deflection from "../src/corrections/FK5Deflection";
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
+
 const angle = new Angle;
 
 describe('#FK5Deflection', () => {

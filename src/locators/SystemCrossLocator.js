@@ -1,9 +1,7 @@
-'use strict';
-
-const CelestialLocator = require('./CelestialLocator');
-const Coord = require('../Coord');
-const NewtonSolver = require('../math/UnaryToolkit/NewtonSolver');
-const JDateRepository = require('../time/JDate/JDateRepository');
+import Locator from './Locator';
+import Coord from '../Coord';
+import NewtonSolver from '../math/UnaryToolkit/NewtonSolver';
+import JDateRepository from '../time/JDate/JDateRepository';
 
 /**
  * SystemCrossLocator
@@ -12,7 +10,7 @@ const JDateRepository = require('../time/JDate/JDateRepository');
  *
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class SystemCrossLocator extends CelestialLocator {
+class SystemCrossLocator extends Locator {
 
   /**
    * 构造函数
@@ -220,4 +218,4 @@ class SystemCrossLocator extends CelestialLocator {
   }
 }
 
-module.exports = SystemCrossLocator;
+export default SystemCrossLocator;

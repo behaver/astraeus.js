@@ -1,5 +1,8 @@
-const BaseCoordinate3D = require('../src/math/Coordinate/3d/BaseCoordinate3D');
-const expect = require("chai").expect;
+// const BaseCoordinate3D = require('../src/math/Coordinate/3d/BaseCoordinate3D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import BaseCoordinate3D from '../src/math/Coordinate/3d/BaseCoordinate3D';
 
 describe('#BaseCoordinate3D', () => {
 

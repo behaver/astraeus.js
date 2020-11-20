@@ -1,8 +1,14 @@
-const expect = require("chai").expect;
-const SiderealTime = require('../src/time/SiderealTime');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const JDate = require('../src/time/JDate/JDate');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const SiderealTime = require('../src/time/SiderealTime');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const JDate = require('../src/time/JDate/JDate');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import JDate from '../src/time/JDate/JDate';
+import SiderealTime from '../src/time/SiderealTime';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

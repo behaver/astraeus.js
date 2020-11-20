@@ -1,7 +1,12 @@
-const Nutation = require('../src/corrections/Nutation');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const JDate = require('../src/time/JDate/JDate');
-const expect = require("chai").expect;
+// const Nutation = require('../src/corrections/Nutation');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const JDate = require('../src/time/JDate/JDate');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import Nutation from "../src/corrections/Nutation";
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import JDate from '../src/time/JDate/JDate';
 
 describe('#Nutation', () => {
   describe('#consturctor(options)', () => {

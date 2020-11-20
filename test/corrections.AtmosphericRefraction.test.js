@@ -1,5 +1,8 @@
-const expect = require("chai").expect;
-const AtmosphericRefraction = require('../src/corrections/AtmosphericRefraction');
+// const expect = require("chai").expect;
+// const AtmosphericRefraction = require('../src/corrections/AtmosphericRefraction');
+
+import { expect } from 'chai';
+import AtmosphericRefraction from "../src/corrections/AtmosphericRefraction";
 
 describe('#AtmosphericRefraction', () => {
   describe('constructor(options)', () => {

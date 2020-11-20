@@ -1,6 +1,4 @@
-'use strict';
-
-const EarthSSBVelocity = require('../velocity/EarthSSBVelocity');
+import EarthSSBVelocity from '../velocity/EarthSSBVelocity';
 
 /**
  * AnnualAberration
@@ -79,4 +77,4 @@ class AnnualAberration {
   }
 }
 
-module.exports = AnnualAberration;
+export default AnnualAberration;

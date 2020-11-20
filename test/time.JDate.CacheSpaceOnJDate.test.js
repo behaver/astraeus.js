@@ -1,7 +1,12 @@
-const JDate = require('../src/time/JDate/JDate');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const CacheSpaceOnJDate = require('../src/time/JDate/CacheSpaceOnJDate');
-const expect = require("chai").expect;
+// const JDate = require('../src/time/JDate/JDate');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const CacheSpaceOnJDate = require('../src/time/JDate/CacheSpaceOnJDate');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import JDate from '../src/time/JDate/JDate';
+import CacheSpaceOnJDate from '../src/time/JDate/CacheSpaceOnJDate';
+import JDateRepository from '../src/time/JDate/JDateRepository';
 
 describe('#CacheSpaceOnJDate', () => {
   describe('#constructor(jdate)', () => {

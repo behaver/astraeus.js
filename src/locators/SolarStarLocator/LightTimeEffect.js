@@ -1,6 +1,4 @@
-'use strict';
-
-const JDateRepository = require('../../time/JDate/JDateRepository');
+import JDateRepository from '../../time/JDate/JDateRepository';
 
 /**
  * LightTimeEffect
@@ -123,4 +121,4 @@ class LightTimeEffect {
   }
 }
 
-module.exports = LightTimeEffect;
+export default LightTimeEffect;

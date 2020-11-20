@@ -1,9 +1,16 @@
-const expect = require("chai").expect;
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
-const DynamicCalculator = require('../src/calculators/FixedStarCalculator/DynamicCalculator');
-const TrigonometricCalculator = require('../src/calculators/FixedStarCalculator/TrigonometricCalculator');
-const FixedStarLocator = require('../src/locators/FixedStarLocator');
+// const expect = require("chai").expect;
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+// const DynamicCalculator = require('../src/calculators/FixedStarCalculator/DynamicCalculator');
+// const TrigonometricCalculator = require('../src/calculators/FixedStarCalculator/TrigonometricCalculator');
+// const FixedStarLocator = require('../src/locators/FixedStarLocator');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import EquinoctialCoordinate from '../src/coords/EquinoctialCoordinate';
+import DynamicCalculator from '../src/calculators/FixedStarCalculator/DynamicCalculator';
+import TrigonometricCalculator from '../src/calculators/FixedStarCalculator/TrigonometricCalculator';
+import FixedStarLocator from '../src/locators/FixedStarLocator';
 
 describe('#index', () => {
   describe('#constructor(options)', () => {

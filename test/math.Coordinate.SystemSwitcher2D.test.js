@@ -1,5 +1,8 @@
-const SystemSwitcher2D = require('../src/math/Coordinate/2d/SystemSwitcher2D');
-const expect = require("chai").expect;
+// const SystemSwitcher2D = require('../src/math/Coordinate/2d/SystemSwitcher2D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import SystemSwitcher2D from '../src/math/Coordinate/2d/SystemSwitcher2D';
 
 describe('#SystemSwitcher2D', () => {
   describe('#constructor', () => {

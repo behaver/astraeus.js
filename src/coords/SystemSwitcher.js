@@ -1,14 +1,13 @@
-'use strict';
+import CommonCoordinate from './CommonCoordinate';
+import HorizontalCoordinate from './HorizontalCoordinate';
+import HourAngleCoordinate from './HourAngleCoordinate';
+import EquinoctialCoordinate from './EquinoctialCoordinate';
+import EclipticCoordinate from './EclipticCoordinate';
+import GalacticCoordinate from './GalacticCoordinate';
+import JDateRepository from '../time/JDate/JDateRepository';
+import SiderealTime from '../time/SiderealTime';
+import Angle from '../math/Angle';
 
-const CommonCoordinate = require('./CommonCoordinate');
-const HorizontalCoordinate = require('./HorizontalCoordinate');
-const HourAngleCoordinate = require('./HourAngleCoordinate');
-const EquinoctialCoordinate = require('./EquinoctialCoordinate');
-const EclipticCoordinate = require('./EclipticCoordinate');
-const GalacticCoordinate = require('./GalacticCoordinate');
-const JDateRepository = require('../time/JDate/JDateRepository');
-const SiderealTime = require('../time/SiderealTime');
-const Angle = require('../math/Angle');
 const angle = new Angle;
 
 /**
@@ -617,4 +616,4 @@ class SystemSwitcher {
   }
 }
 
-module.exports = SystemSwitcher;
+export default SystemSwitcher;

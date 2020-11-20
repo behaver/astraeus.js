@@ -1,5 +1,8 @@
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
-const expect = require("chai").expect;
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
 
 describe('#SphericalCoordinate3D', () => {
   describe('#constructor', () => {

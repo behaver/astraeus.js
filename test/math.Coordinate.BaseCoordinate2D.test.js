@@ -1,5 +1,8 @@
-const BaseCoordinate2D = require('../src/math/Coordinate/2d/BaseCoordinate2D');
-const expect = require("chai").expect;
+// const BaseCoordinate2D = require('../src/math/Coordinate/2d/BaseCoordinate2D');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import BaseCoordinate2D from '../src/math/Coordinate/2d/BaseCoordinate2D';
 
 describe('#BaseCoordinate2D', () => {
   describe('#constructor', () => {

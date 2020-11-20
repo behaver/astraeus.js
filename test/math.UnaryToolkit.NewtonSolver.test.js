@@ -1,10 +1,17 @@
-const expect = require("chai").expect;
-const SunCoordinate = require('../src/locators/SolarStarLocator/planets/Sun');
-const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const expect = require("chai").expect;
+// const SunCoordinate = require('../src/locators/SolarStarLocator/planets/Sun');
+// const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
 
-const NewtonSolver = require('../src/math/UnaryToolkit/NewtonSolver');
+// const NewtonSolver = require('../src/math/UnaryToolkit/NewtonSolver');
+
+import { expect } from 'chai';
+import SunCoordinate from '../src/locators/SolarStarLocator/planets/Sun';
+import HorizontalCoordinate from '../src/coords/HorizontalCoordinate';
+import SystemSwitcher from '../src/coords/SystemSwitcher';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import NewtonSolver from '../src/math/UnaryToolkit/NewtonSolver';
 
 describe('#NewtonSolver', () => {
   describe('#Verify', () => {

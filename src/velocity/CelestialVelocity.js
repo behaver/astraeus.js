@@ -1,8 +1,6 @@
-'use strict';
-
-const Derivator = require('../math/UnaryToolkit/Derivator');
-const SystemSwitcher = require('../coords/SystemSwitcher');
-const CelestialLocator = require('../locators/CelestialLocator');
+import Derivator from '../math/UnaryToolkit/Derivator';
+import SystemSwitcher from '../coords/SystemSwitcher';
+import Locator from '../locators/Locator';
 
 /**
  * CelestialVelocity
@@ -16,33 +14,33 @@ class CelestialVelocity {
   /**
    * 构造函数
    * 
-   * @param {CelestialLocator} cel_locator 天体位置提供组件
+   * @param {Locator} cel_locator 天体位置提供组件
    */
   constructor(cel_locator) {
     this.private = {
       celestial: {}
     };
 
-    this.CelestialLocator = cel_locator;
+    this.Locator = cel_locator;
   }
 
   /**
    * 设定 天体位置提供组件
    * 
-   * @param {CelestialLocator} value 天体位置提供组件
+   * @param {Locator} value 天体位置提供组件
    */
-  set CelestialLocator(value) {
+  set Locator(value) {
     // console.log(value.constructor);
-    if (!(value instanceof CelestialLocator)) throw Error('The param value should be an instance of CelestialLocator.');
+    if (!(value instanceof Locator)) throw Error('The param value should be an instance of Locator.');
 
-    this.private.CelestialLocator = value;
+    this.private.Locator = value;
   }
 
   /**
    * 获取 天体位置提供组件
    */
-  get CelestialLocator() {
-    return this.private.CelestialLocator;
+  get Locator() {
+    return this.private.Locator;
   }
 
   /**
@@ -84,7 +82,7 @@ class CelestialVelocity {
       celOpts = this.private.celestial.opts;
     }
 
-    let CL = this.CelestialLocator;
+    let CL = this.Locator;
 
     // 构造求导原始函数 f
     let f = function(t) {
@@ -126,4 +124,4 @@ class CelestialVelocity {
   }
 }
 
-module.exports = CelestialVelocity;
+export default CelestialVelocity;

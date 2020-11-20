@@ -1,10 +1,8 @@
-'use strict';
-
-const CelestialLocator = require('./CelestialLocator');
-const EquinoctialCoordinate = require('../coords/EquinoctialCoordinate');
-const DynamicCalculator = require('../calculators/FixedStarCalculator/TrigonometricCalculator');
-const TrigonometricCalculator = require('../calculators/FixedStarCalculator/TrigonometricCalculator');
-const JDateRepository = require('../time/JDate/JDateRepository');
+import Locator from './Locator';
+import EquinoctialCoordinate from '../coords/EquinoctialCoordinate';
+import TrigonometricCalculator from '../calculators/FixedStarCalculator/TrigonometricCalculator';
+import DynamicCalculator from '../calculators/FixedStarCalculator/DynamicCalculator';
+import JDateRepository from '../time/JDate/JDateRepository';
 
 /**
  * FixedStarLocator
@@ -13,7 +11,7 @@ const JDateRepository = require('../time/JDate/JDateRepository');
  *
  * @author 董 三碗 <qianxing@yeah.net>
  */
-class FixedStarLocator extends CelestialLocator {
+class FixedStarLocator extends Locator {
 
   /**
    * 构造函数
@@ -311,4 +309,4 @@ class FixedStarLocator extends CelestialLocator {
   }
 }
 
-module.exports = FixedStarLocator;
+export default FixedStarLocator;

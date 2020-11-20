@@ -1,9 +1,15 @@
-'use strict';
+// 'use strict';
 
-const expect = require("chai").expect;
-const Position = require('../src/calculators/EarthSSBCalculator');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const Position = require('../src/calculators/EarthSSBCalculator');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const Angle = require('../src/math/Angle');
+
+// import CommonCalculator from './CommonCalculator';
+import { expect } from 'chai';
+import Position from '../src/calculators/EarthSSBCalculator';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

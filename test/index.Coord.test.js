@@ -1,14 +1,25 @@
-const expect = require("chai").expect;
+// const expect = require("chai").expect;
 
-const CelestialCoordinate = require('../src/Coord');
-const SystemSwitcher = require('../src/coords/SystemSwitcher');
-const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
-const HourAngleCoordinate = require('../src/coords/HourAngleCoordinate');
-const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
-const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
-const GalacticCoordinate = require('../src/coords/GalacticCoordinate');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+// const CelestialCoordinate = require('../src/Coord');
+// const SystemSwitcher = require('../src/coords/SystemSwitcher');
+// const HorizontalCoordinate = require('../src/coords/HorizontalCoordinate');
+// const HourAngleCoordinate = require('../src/coords/HourAngleCoordinate');
+// const EquinoctialCoordinate = require('../src/coords/EquinoctialCoordinate');
+// const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
+// const GalacticCoordinate = require('../src/coords/GalacticCoordinate');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const SphericalCoordinate3D = require('../src/math/Coordinate/3d/SphericalCoordinate3D');
+
+import { expect } from 'chai';
+import CelestialCoordinate from "../src/Coord";
+import SystemSwitcher from '../src/coords/SystemSwitcher';
+import HorizontalCoordinate from '../src/coords/HorizontalCoordinate';
+import HourAngleCoordinate from '../src/coords/HourAngleCoordinate';
+import EquinoctialCoordinate from '../src/coords/EquinoctialCoordinate';
+import EclipticCoordinate from '../src/coords/EclipticCoordinate';
+import GalacticCoordinate from '../src/coords/GalacticCoordinate';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import SphericalCoordinate3D from '../src/math/Coordinate/3d/SphericalCoordinate3D';
 
 describe('#CelestialCoordinate', () => {
   describe('#constructor', () => {

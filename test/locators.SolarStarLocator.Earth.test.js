@@ -1,8 +1,14 @@
-const expect = require("chai").expect;
-const EarthLocator = require('../src/locators/SolarStarLocator/planets/Earth');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
-const Angle = require('../src/math/Angle');
+// const expect = require("chai").expect;
+// const EarthLocator = require('../src/locators/SolarStarLocator/planets/Earth');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const EclipticCoordinate = require('../src/coords/EclipticCoordinate');
+// const Angle = require('../src/math/Angle');
+
+import { expect } from 'chai';
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import EclipticCoordinate from '../src/coords/EclipticCoordinate';
+import EarthLocator from '../src/locators/SolarStarLocator/planets/Earth';
+import Angle from '../src/math/Angle';
 
 const angle = new Angle;
 

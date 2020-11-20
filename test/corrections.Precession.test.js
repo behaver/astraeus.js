@@ -1,7 +1,12 @@
-const Precession = require('../src/corrections/Precession');
-const JDateRepository = require('../src/time/JDate/JDateRepository');
-const JDate = require('../src/time/JDate/JDate');
-const expect = require("chai").expect;
+// const Precession = require('../src/corrections/Precession');
+// const JDateRepository = require('../src/time/JDate/JDateRepository');
+// const JDate = require('../src/time/JDate/JDate');
+// const expect = require("chai").expect;
+
+import { expect } from 'chai';
+import Precession from "../src/corrections/Precession";
+import JDateRepository from '../src/time/JDate/JDateRepository';
+import JDate from '../src/time/JDate/JDate';
 
 describe('#Precession', () => {
   describe('#consturctor(jdr)', () => {
