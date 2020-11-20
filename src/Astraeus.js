@@ -1,7 +1,8 @@
 import Coord from './Coord';
 import Observer from './Observer';
 import Velocity from './velocity/CelestialVelocity';
-import JDate from './time/JDate/JDateRepository';
+import JDateRepository from './time/JDate/JDateRepository';
+import JDate from './time/JDate/JDate';
 import SiderealTime from './time/SiderealTime';
 import Angle from './math/Angle';
 import SphericalCoordinate3D from './math/Coordinate/3d/SphericalCoordinate3D';
@@ -53,10 +54,13 @@ import UranusCalculator from './calculators/SolarPlanetsCalculator/planets/Uranu
 import VenusCalculator from './calculators/SolarPlanetsCalculator/planets/Venus';
 import EarthSSBCalculator from './calculators/EarthSSBCalculator';
 
-export default {
+// export *;
+
+export {
   Coord,
   Observer,
   Velocity,
+  JDateRepository,
   JDate,
   SiderealTime,
   Angle,

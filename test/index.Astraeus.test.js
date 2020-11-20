@@ -1,14 +1,15 @@
 import { expect } from 'chai';
 import Astraeus from "../src/Astraeus";
+import { Observer, JDateRepository } from "../src/Astraeus";
 
 describe('#demo', () => {
   it('normally use', () => {
     expect(() => {
       // 实例化天体坐标定位控制器
-      let observer = new Astraeus.Observer;
+      let observer = new Observer;
 
       // 实例化儒略时间
-      let JDate = new Astraeus.JDate(new Date(1992, 7, 15, 8, 25), 'date');
+      let JDate = new JDateRepository(new Date(1992, 7, 15, 8, 25), 'date');
 
       // 设置定位参数
       observer.onObservatory({

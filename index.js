@@ -1,3 +1,1 @@
-import Astraeus from './src/Astraeus';
-
-export default Astraeus;
+export * from './src/Astraeus';
