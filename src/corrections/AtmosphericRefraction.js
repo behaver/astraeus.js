@@ -1,4 +1,4 @@
-import Angle from '../math/angle';
+import Angle from '../math/Angle';
 
 const angle = new Angle;
 
