@@ -54,8 +54,6 @@ import UranusCalculator from './calculators/SolarPlanetsCalculator/planets/Uranu
 import VenusCalculator from './calculators/SolarPlanetsCalculator/planets/Venus';
 import EarthSSBCalculator from './calculators/EarthSSBCalculator';
 
-// export *;
-
 export {
   Coord,
   Observer,
