@@ -105,6 +105,8 @@ class Observer {
       obGeoLong: this.private.observatory.longitude,
       obGeoLat: this.private.observatory.latitude,
       obElevation: this.private.observatory.elevation,
+      obTemperature: this.private.observatory.temperature,
+      obPressure: this.private.observatory.pressure,
     };
 
     this.private.Coord.options = options;
@@ -464,6 +466,11 @@ class Observer {
       withGravitationalDeflection: (this.private.corrections.graDeflection & 2) === 2,
       withAR: (this.private.corrections.atmRefraction & 2) === 2,
       onFK5: (this.private.corrections.fk5 & 2) === 2,
+      obGeoLong: this.private.observatory.longitude, 
+      obGeoLat: this.private.observatory.latitude, 
+      obElevation: this.private.observatory.elevation, 
+      obTemperature: this.private.observatory.temperature,
+      obPressure: this.private.observatory.pressure,
     };
     let afterResultProcessed = callback || this.private.afterResultProcessed;
     let sys = this.private.coordSetting.system;

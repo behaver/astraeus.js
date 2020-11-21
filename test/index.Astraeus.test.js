@@ -74,7 +74,7 @@ describe('#demo', () => {
         fk5: 0,
       }).useCoordSetting({
         system: 'hc',
-        centerMode: 'geocentric',
+        centerMode: 'topocentric',
         isContinuous: false,
       }).atTime(JDate);
 

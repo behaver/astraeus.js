@@ -20,25 +20,29 @@ class HorizontalCoordinate extends CommonCoordinate {
   /**
    * 设定起始天球地平坐标
    * 
-   * @param  {JDateRepository}       options.epoch       观测历元
-   * @param  {Number}                options.obGeoLong   观测点地理经度，单位：度，值域：[180, 180]
-   * @param  {Number}                options.obGeoLat    观测点地理纬度，单位：度，值域：[-90, 90]
-   * @param  {Number}                options.obElevation 观测点海拔高度，单位：米，值域：值域：[-12000, 3e7]
-   * @param  {SphericalCoordinate3D} options.sc          球坐标
-   * @param  {Number}                options.longitude   方位角，单位：度
-   * @param  {Number}                options.latitude    地平高度，单位：度
-   * @param  {Number}                options.radius      坐标距离半径，值域：[10e-8, +∞)
-   * @param  {String}                options.centerMode  中心模式：geocentric（地心坐标）、topocentric（站心坐标）
-   * @param  {Boolean}               options.enableAR    大气折射修正启用状态
-   * @param  {Boolean}               options.withAR      坐标是否含有大气折射
+   * @param  {JDateRepository}       options.epoch         观测历元
+   * @param  {Number}                options.obGeoLong     观测点地理经度，单位：度，值域：[180, 180]
+   * @param  {Number}                options.obGeoLat      观测点地理纬度，单位：度，值域：[-90, 90]
+   * @param  {Number}                options.obElevation   观测点海拔高度，单位：米，值域：值域：[-12000, 3e7]
+   * @param  {Number}                options.obTemperature 观测点温度，单位：摄氏度，值域：值域：[-100, 100]
+   * @param  {Number}                options.obPressure    观测点气压，单位：毫巴/百帕，值域：值域：[500, 1500]
+   * @param  {SphericalCoordinate3D} options.sc            球坐标
+   * @param  {Number}                options.longitude     方位角，单位：度
+   * @param  {Number}                options.latitude      地平高度，单位：度
+   * @param  {Number}                options.radius        坐标距离半径，值域：[10e-8, +∞)
+   * @param  {String}                options.centerMode    中心模式：geocentric（地心坐标）、topocentric（站心坐标）
+   * @param  {Boolean}               options.enableAR      大气折射修正启用状态
+   * @param  {Boolean}               options.withAR        坐标是否含有大气折射
    * 
-   * @return {HorizontalCoordinate}                      返回 this 引用
+   * @return {HorizontalCoordinate}                        返回 this 引用
    */
   from({
     epoch,
     obGeoLong,
     obGeoLat,
     obElevation,
+    obTemperature,
+    obPressure,
     sc,
     longitude,
     latitude,
@@ -81,6 +85,8 @@ class HorizontalCoordinate extends CommonCoordinate {
       obGeoLong,
       obGeoLat,
       obElevation,
+      obTemperature,
+      obPressure,
       centerMode,
       enableAR: !! enableAR,
       withAR: !! withAR,
@@ -114,6 +120,8 @@ class HorizontalCoordinate extends CommonCoordinate {
     obGeoLong,
     obGeoLat,
     obElevation,
+    obTemperature,
+    obPressure,
     centerMode,
     enableAR,
     withAR,
@@ -186,9 +194,14 @@ class HorizontalCoordinate extends CommonCoordinate {
     this.private.obGeoLong = obGeoLong;
     this.private.obGeoLat = obGeoLat;
     this.private.obElevation = obElevation;
+    this.private.obGeoLat = obGeoLat;
+    this.private.obElevation = obElevation;
+    this.private.obTemperature = obTemperature;
+    this.private.obPressure = obPressure;
 
     // 转换成新站心坐标以及处理大气折射（如果设定需要的话）
     if (centerMode === 'topocentric') {
+
       // 转化为新站心坐标
       this.onTopocentric();
 
@@ -261,6 +274,8 @@ class HorizontalCoordinate extends CommonCoordinate {
       
       if (h > 0) {
         let ar = new AtmosphericRefraction({
+          T: this.private.obTemperature,
+          P: this.private.obPressure,
           trueH: h,
         });
 
@@ -290,6 +305,8 @@ class HorizontalCoordinate extends CommonCoordinate {
       
       if (h > 0) {
         let ar = new AtmosphericRefraction({
+          T: this.private.obTemperature,
+          P: this.private.obPressure,
           apparentH: h,
         });
 
